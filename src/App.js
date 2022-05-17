@@ -41,7 +41,7 @@ const App = () => {
   return (
     <div>
         <div className={classes.logoContainer}>
-            <img src='https://voicebot.ai/wp-content/uploads/2019/10/alan.jpg' className={classes.alanLogo} alt="Alan logo" />
+            <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
         </div>
         <NewsCards articles={newsArticles} activeArticle={activeArticle} />
         <div>
