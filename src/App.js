@@ -5,6 +5,7 @@ import wordToNumbers from 'words-to-numbers';
 
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
+import { Typography } from '@material-ui/core';
 
 const alanKey = 'c464231c47b8ad2748fe0fe5720862822e956eca572e1d8b807a3e2338fdd0dc/stage';
 
@@ -43,6 +44,9 @@ const App = () => {
             <img src='https://voicebot.ai/wp-content/uploads/2019/10/alan.jpg' className={classes.alanLogo} alt="Alan logo" />
         </div>
         <NewsCards articles={newsArticles} activeArticle={activeArticle} />
+        <div>
+            <Typography varient='h5' color='textSecondary' className={classes.creds}>Built by Azmayen Murshid</Typography>
+        </div>
     </div>
   )
 }
