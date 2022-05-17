@@ -2,10 +2,13 @@ import React, { useState, useEffect } from 'react';
 import alanBtn from '@alan-ai/alan-sdk-web';
 
 import wordToNumbers from 'words-to-numbers';
+import { Switch, Route, Link } from 'react-router-dom';
 
 import NewsCards from './components/NewsCards/NewsCards';
 import useStyles from './styles.js';
-import { Typography } from '@material-ui/core';
+import { Button, Typography } from '@material-ui/core';
+
+import LearnMore from './components/LearnMore/LearnMore';
 
 const alanKey = 'c464231c47b8ad2748fe0fe5720862822e956eca572e1d8b807a3e2338fdd0dc/stage';
 
@@ -38,15 +41,34 @@ const App = () => {
         })
     }, []);
 
+    const Footer = () => {
+        return(
+            <div>
+                <Typography varient='h5' color='textSecondary' className={classes.creds}>Built by Azmayen Murshid</Typography>
+            </div>
+        )
+    }
+
   return (
     <div>
-        <div className={classes.logoContainer}>
-            <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
+        <Switch>
+            <Route exact path='/'>
+                <div className={classes.logoContainer}>
+                    <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
+                </div>
+                <NewsCards articles={newsArticles} activeArticle={activeArticle} />
+                <div className='learnMoreBtn__container'>
+                <Link to='/learn-more'>
+                    <Button className={classes.learnMoreBtn}>Learn More</Button>
+                </Link>
         </div>
-        <NewsCards articles={newsArticles} activeArticle={activeArticle} />
-        <div>
-            <Typography varient='h5' color='textSecondary' className={classes.creds}>Built by Azmayen Murshid</Typography>
-        </div>
+            </Route>
+            <Route exact path='/learn-more'>
+                <LearnMore />
+            </Route>
+        </Switch>
+        
+        <Footer />
     </div>
   )
 }

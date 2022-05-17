@@ -73,4 +73,10 @@ export default makeStyles((theme) => ({
       height: '35vmin',
     },
   },
+  learnMoreBtn: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    fontSize: 20,
+  }
 }));

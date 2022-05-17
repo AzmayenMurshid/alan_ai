@@ -4,7 +4,8 @@
 
 body{
     margin: 0;
-    background-color: whitesmoke;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(107,9,156,1) 100%);
 }
 
 * {
@@ -13,4 +14,9 @@ body{
 
 html {
     scroll-behavior: smooth;
+}
+.learnMoreBtn__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
