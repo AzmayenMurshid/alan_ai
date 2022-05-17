@@ -73,4 +73,9 @@ export default makeStyles((theme) => ({
       height: '35vmin',
     },
   },
+  creds:{
+    textAlign: 'center',
+    width: '100%',
+    padding: 15,
+  }
 }));
