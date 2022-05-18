@@ -9,6 +9,7 @@ import useStyles from './styles.js';
 import { Button, Typography } from '@material-ui/core';
 
 import LearnMore from './components/LearnMore/LearnMore';
+import Background from './Background';
 
 const alanKey = 'c464231c47b8ad2748fe0fe5720862822e956eca572e1d8b807a3e2338fdd0dc/stage';
 
@@ -68,6 +69,7 @@ const App = () => {
             </Route>
         </Switch>
         <div>
+            <Background />
             <Typography varient='h5' color='textSecondary' className={classes.creds}>
                 Built by Azmayen Murshid
             </Typography>
