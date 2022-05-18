@@ -13,7 +13,7 @@ const infoCards = [
   { color: '#0d47a1', title: 'Ask about weather', info: 'Real time weather forecast of any location', text: 'How is the weather today' },
   { color: '#225599', title: 'Ask about Date', info: 'Alan is smart enough to understand the concept of date', text: 'What date is it Today? Or What day will it be tomorrow?' },
   { color: '#153b6e', title: 'Ask Yoda Quotes', info: 'To make Alan fun and more engaging, it can say a set of Yoda phrases', text: 'What would Yoda say? Or What would Yoda tell me?' },
-  { color: '#5077b5', title: 'Ask simple questions', info: 'Alan can calculate arithematic operations and give you the answer.', text: 'What is 115 times 12?' }   
+  { color: '#5077b5', title: 'Simple math questions', info: 'Alan can calculate arithematic operations and give you the answer.', text: 'What is 115 times 12?' }   
 ];
 
 const NewsCards = ({ articles, activeArticle }) => {
