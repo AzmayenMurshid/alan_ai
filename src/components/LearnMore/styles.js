@@ -26,6 +26,6 @@ export default makeStyles({
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        fontSize: 20,
+        fontSize: 15,
     }
 });
