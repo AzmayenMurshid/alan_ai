@@ -22,4 +22,10 @@ export default makeStyles({
         flexDirection: 'column',
         textAlign: 'center',
     },
+    returnBtn: {
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        fontSize: 20,
+    }
 });

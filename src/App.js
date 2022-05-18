@@ -41,11 +41,19 @@ const App = () => {
         })
     }, []);
 
-    const Footer = () => {
+    const Home = () => {
         return(
-            <div>
-                <Typography varient='h5' color='textSecondary' className={classes.creds}>Built by Azmayen Murshid</Typography>
-            </div>
+            <>
+                <div className={classes.logoContainer}>
+                    <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
+                </div>
+                <NewsCards articles={newsArticles} activeArticle={activeArticle} />
+                <div className='Btn__container'>
+                    <Link to='/learn-more'>
+                        <Button className={classes.learnMoreBtn}>Learn More</Button>
+                    </Link>
+                </div>
+            </>
         )
     }
 
@@ -53,22 +61,17 @@ const App = () => {
     <div>
         <Switch>
             <Route exact path='/'>
-                <div className={classes.logoContainer}>
-                    <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
-                </div>
-                <NewsCards articles={newsArticles} activeArticle={activeArticle} />
-                <div className='learnMoreBtn__container'>
-                <Link to='/learn-more'>
-                    <Button className={classes.learnMoreBtn}>Learn More</Button>
-                </Link>
-        </div>
+                <Home />
             </Route>
             <Route exact path='/learn-more'>
                 <LearnMore />
             </Route>
         </Switch>
-        
-        <Footer />
+        <div>
+            <Typography varient='h5' color='textSecondary' className={classes.creds}>
+                Built by Azmayen Murshid
+            </Typography>
+        </div>
     </div>
   )
 }
