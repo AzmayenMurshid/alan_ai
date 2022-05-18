@@ -9,7 +9,7 @@ const LearnMore = () => {
     const learnMoreCards = [
         {color: '#225599',title: 'Who is Alan?', info: 'Alan is a personal assistant who gets you the latest news, weather, and other day to day information. In order to talk to him, press the mic button on your screen', text: 'Try asking Alan who he is!'},
         {color: '#153b6e',title: 'What is Alan\'s purpose?', info: 'Alan is here for your convenience, getting latest information around the world and to keep you entertained!', text: 'Try asking Alan his abilities'},
-        {color: '#00838f',title: 'News', info: 'Alan able to fetch news articles from top sources', text: 'Try out searching for Latest news, news by Term, Category and sources'},
+        {color: '#00838f',title: 'News', info: 'Alan able to fetch news articles from top sources', text: 'Try out searching for Latest news, news by Term, Category and sources. To see the news, return to the Home page'},
         {color: '#1565c0',title: 'Weather Forecast', info: 'Alan is able to get weather forecast for current weather in a specific location', text: 'Get the weather forecast by states and countries through Alan.'},
         {color: '#4527a0',title: 'Calendar', info: 'Alan is able to check the calendar for you and track dates!', text: 'Test out his calendar abilities by asking him what would the date be next Saturday.'},
         {color: '#283593',title: 'Calculator', info: 'Alan is able to do simple arithmatic problems similar to phone calculators!', text: 'Test Alan\'s math skills by giving him any math operation question!'},
