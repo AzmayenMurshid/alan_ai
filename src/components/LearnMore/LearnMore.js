@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { Grid, Grow, Typography, Button } from '@material-ui/core'
 
@@ -16,6 +16,11 @@ const LearnMore = () => {
         {color: '#1565c0',title: 'Small Talk', info: 'Want to know more about Alan? Talk to him personally and get to know him more!', text: 'Get to know your virtual friend by asking him personal questions'},
         {color: '#0d47a1',title: 'Yoda quotes', info: 'Alan can keep you entertained with wise Yoda quotes from Star Wars!', text: 'Test his Yoda quotes by asking him what would Yoda say.'},
     ]
+
+    useEffect(() =>{
+        window.scroll(0, 0);
+    }, [])
+    
   return (
     <>
         <Typography 
