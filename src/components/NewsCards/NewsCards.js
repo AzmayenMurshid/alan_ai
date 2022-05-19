@@ -33,14 +33,14 @@ const NewsCards = ({ articles, activeArticle }) => {
                                         {infoCard.title}
                                     </Typography>
                                     {infoCard.info 
-                                    ? (<Typography variant='h6'>
+                                    ? (<Typography variant='body1'>
                                         <strong>
                                             {infoCard.title.split(' ')[2]}:
                                         </strong>
                                             <br />
                                             {infoCard.info}
                                     </Typography>) : null}
-                                    <Typography variant='h6'>Try saying: <br/><i>{infoCard.text}</i></Typography>
+                                    <Typography variant='body2'>Try saying: <br/><i>{infoCard.text}</i></Typography>
                                 </div>
                             </Grid>
                         ))
