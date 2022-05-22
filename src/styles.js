@@ -1,5 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
+// Material UI styling objects
+
 export default makeStyles((theme) => ({
   footer: {
     textAlign: 'center',
