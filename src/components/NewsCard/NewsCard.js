@@ -13,16 +13,16 @@ const NewsCard = ({ article: { description, publishedAt, source, title, url, url
   //useEffect hook to autoscroll when Alan reads headlines.
   useEffect(() => {
     window.scroll(0, 0);
-
+    // iterate through cards and autoscroll to article reading.
     setElRefs((refs) => Array(20).fill().map((_, j) => refs[j] || createRef()));
   }, []);
 
-  useEffect(() => {
+  useEffect(() => { // check article index in array.
     if (i === activeArticle && elRefs[activeArticle]) {
       scrollToRef(elRefs[activeArticle]);
     }
   }, [i, activeArticle, elRefs]);
-
+  {/* news article component rendering */}
   return (
     <Card ref={elRefs[i]} className={ activeArticle === i ? classes.activeCard : classes.card}> {/* auto read highlight class activation */}
       <CardActionArea href={url} target="_blank">
