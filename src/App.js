@@ -52,7 +52,7 @@ const App = () => {
                 </div>
                 <NewsCards articles={newsArticles} activeArticle={activeArticle} />
                 <div className='Btn__container'>
-                    <Link to='/learn-more'>
+                    <Link to={'/learn-more'}>
                         <Button className={classes.learnMoreBtn}>Learn More</Button>
                     </Link>
                 </div>

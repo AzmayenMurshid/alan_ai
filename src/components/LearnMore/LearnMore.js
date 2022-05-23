@@ -34,8 +34,8 @@ const LearnMore = () => {
         <Grow in>
             <Grid className={classes.container} container alignItems='stretch' spacing={3}>
             {
-                learnMoreCards.map((card, index) => (
-                    <>
+                learnMoreCards.map((card, index) => ( 
+                    <>{/* mapping through the array */}
                         <Grid item xs={12} sm={6} md={4} lg={3} className={classes.infoCard}>
                             <div className={classes.card} style={{ backgroundColor: card.color }}>
                                 <Typography variant='h5'>
