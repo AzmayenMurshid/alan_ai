@@ -1,16 +1,13 @@
 #root, html, body {
     height: 100vh;
 }
-
 body{
     margin: 0;
     position: relative;
 }
-
 * {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
@@ -36,7 +33,6 @@ html {
     overflow: hidden;
     z-index: -1;
 }
-
 .background span {
     width: 24vmin;
     height: 24vmin;
@@ -48,8 +44,6 @@ html {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-
-
 .background span:nth-child(0) {
     color: #E45A84;
     top: 89%;

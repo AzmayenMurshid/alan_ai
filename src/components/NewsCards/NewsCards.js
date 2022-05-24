@@ -4,7 +4,7 @@ import { Grid, Grow, Typography } from '@material-ui/core';
 import useStyles from './styles.js';
 import NewsCard from '../NewsCard/NewsCard'
 
-const infoCards = [
+const infoCards = [ // card data to render
   { color: '#00838f', title: 'Latest World News', info: 'Latest world news from top sources', text: 'Give me the latest news' },
   { color: '#1565c0', title: 'News by Categories', info: 'Business, Entertainment, General, Health, Science, Sports, Technology', text: 'Give me the latest Technology news' },
   { color: '#4527a0', title: 'News by Terms', info: 'Bitcoin, PlayStation 5, Smartphones, Donald Trump...', text: 'What\'s up with PlayStation 5' },
@@ -14,7 +14,7 @@ const infoCards = [
   { color: '#225599', title: 'Ask about Date', info: 'Alan is smart enough to understand the concept of date', text: 'What date is it Today? Or What day will it be tomorrow?' },
   { color: '#153b6e', title: 'Ask Yoda Quotes', info: 'To make Alan fun and more engaging, it can say a set of Yoda phrases', text: 'What would Yoda say? Or What would Yoda tell me?' },
   { color: '#5077b5', title: 'Simple math questions', info: 'Alan can calculate arithematic operations and give you the answer.', text: 'What is 115 times 12?' },
-  { color: '#474b96', title: 'Foreign language translator', info: 'Alan can translate a phrase to multiple languages!', text: 'Translate "Hello" to Spanish.' }   
+  { color: '#474b96', title: 'Foreign language translator', info: 'Alan can translate a phrase to multiple languages!', text: 'What languages can you translate?' }   
  
 ];
 

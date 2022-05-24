@@ -7,7 +7,7 @@ import App from './App';
 
 
 ReactDOM.render(
-    <Router>
+    <Router> {/* Implementation of Browser Router to redirect to different routes. */}
       <App />  
     </Router>, 
     document.getElementById('root'));

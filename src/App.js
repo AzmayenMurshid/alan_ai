@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import alanBtn from '@alan-ai/alan-sdk-web';
+import alanBtn from '@alan-ai/alan-sdk-web'; // taken from alan SDK 
 
 import wordToNumbers from 'words-to-numbers';
 import { Switch, Route, Link } from 'react-router-dom';
 
 import NewsCards from './components/NewsCards/NewsCards';
-import useStyles from './styles.js';
+import useStyles from './styles.js'; // styling hook.
 import { Button, Typography } from '@material-ui/core';
 
 import LearnMore from './components/LearnMore/LearnMore';
@@ -18,22 +18,22 @@ const App = () => {
     const [activeArticle, setActiveArticle] = useState(-1);
     const classes = useStyles();
 
-    useEffect(() => {
-        alanBtn({
+    useEffect(() => { // use Effect hook.
+        alanBtn({ //Alan Btn on click
             key: alanKey,
-            onCommand: ({ command, articles, number }) => {
-                if(command === 'newHeadlines') {
+            onCommand: ({ command, articles, number }) => { //Check command
+                if(command === 'newHeadlines') { // news command
                     setNewsArticles(articles);
-                    setActiveArticle(-1);
-                } else if(command === 'highlight'){
-                    setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
-                } else if(command === 'open') {
+                    setActiveArticle(-1); // direct to beginning of article list
+                } else if(command === 'highlight'){ // headline command
+                    setActiveArticle((prevActiveArticle) => prevActiveArticle + 1); // iterate through list
+                } else if(command === 'open') { // open article command
                     const parsedNumber = number.length > 2 ? wordToNumbers(number, { fuzzy: true }) : number;
                     const article = articles[parsedNumber - 1];
 
-                    if(parsedNumber > 20) {
+                    if(parsedNumber > 20) { //If article index is non existant.
                         alanBtn().playText('Please try that again');
-                    } else if(article) {
+                    } else if(article) { // else ...
                     window.open(article.url, '_blank');
                     alanBtn().playText('Opening...');
                     }
@@ -42,15 +42,17 @@ const App = () => {
         })
     }, []);
 
-    const Home = () => {
+    const Home = () => { { /* Home component */}
         return(
+            
             <>
+            {/* Home components */}
                 <div className={classes.logoContainer}>
                     <img src='https://alan.app/static/mainIll.35028f97.svg' className={classes.alanLogo} alt="Alan logo" />
                 </div>
                 <NewsCards articles={newsArticles} activeArticle={activeArticle} />
                 <div className='Btn__container'>
-                    <Link to='/learn-more'>
+                    <Link to={'/learn-more'}>
                         <Button className={classes.learnMoreBtn}>Learn More</Button>
                     </Link>
                 </div>
@@ -60,7 +62,7 @@ const App = () => {
 
   return (
     <div>
-        <Switch>
+        <Switch> {/* react router dom implementation, creating routes. Use react-router-dom@5.2 */}
             <Route exact path='/'>
                 <Home />
             </Route>
